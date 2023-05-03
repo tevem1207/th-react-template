@@ -16,7 +16,10 @@ export default function SignUpForm() {
       password: data.get("password"),
       name: data.get("name"),
       address: data.get("address"),
-      rrn: data.get("rrnFirst")!.toString() + data.get("rrnLast")!.toString(),
+      rrn:
+        data.get("rrnFirst")!.toString() +
+        "-" +
+        data.get("rrnLast")!.toString(),
     });
   };
 
