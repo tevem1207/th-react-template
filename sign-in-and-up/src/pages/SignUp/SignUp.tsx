@@ -6,14 +6,6 @@ import Container from '@mui/material/Container';
 import SignUpForm from 'components/auth/SignUpForm';
 
 export default function SignUp() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -29,7 +21,7 @@ export default function SignUp() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign Up
+          회원가입
         </Typography>
         <SignUpForm />
       </Box>

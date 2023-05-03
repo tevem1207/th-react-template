@@ -1,9 +1,11 @@
+import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import RRNForm from 'components/auth/RRNForm'
 
 export default function SignUpForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -56,31 +58,11 @@ export default function SignUpForm() {
             fullWidth
             name="address"
             label="주소"
-            type="address"
             id="address"
             autoComplete="address"
           />
         </Grid>
-        <Grid item xs={6}>
-          <TextField
-            required
-            fullWidth
-            name="rrnFirst"
-            label="주소"
-            type="number"
-            id="rrnFirst"
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <TextField
-            required
-            fullWidth
-            name="rrnLast"
-            label="주소"
-            type="number"
-            id="rrnLast"
-          />
-        </Grid>
+        <RRNForm />
       </Grid>
       <Button
         type="submit"
