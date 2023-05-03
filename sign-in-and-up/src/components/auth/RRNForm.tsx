@@ -6,18 +6,14 @@ export default function SignUpForm() {
   const [rrnFirst, setRrnFirst] = useState<string>("");
   const [rrnLast, setRrnLast] = useState<string>("");
 
-  const handleFirstChange = (
-    value: string
-  ) => {
+  const handleFirstChange = (value: string) => {
     const regex = /^[0-9\b]{1,6}$/;
     if (value === "" || regex.test(value)) {
       setRrnFirst(value);
     }
   };
 
-  const handleLastChange = (
-    value: string
-  ) => {
+  const handleLastChange = (value: string) => {
     const regex = /^[0-9\b]{1,7}$/;
     if (value === "" || regex.test(value)) {
       setRrnLast(value);
