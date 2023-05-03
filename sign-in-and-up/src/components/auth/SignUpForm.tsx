@@ -67,8 +67,14 @@ export default function SignUpForm() {
         </Grid>
         <RRNForm />
       </Grid>
-      <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-        Sign Up
+      <Button
+        type="submit"
+        size="large"
+        fullWidth
+        variant="contained"
+        sx={{ mt: 3, mb: 2 }}
+      >
+        회원가입
       </Button>
       <Grid container justifyContent="flex-end">
         <Grid item>
