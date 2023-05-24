@@ -47,7 +47,7 @@ const PostList = () => {
         <List>
           {data.map((item, index) => (
             <ListItem>
-              <Post />
+              <Post id={item.id} title={item.title} contents={item.contents} />
             </ListItem>
           ))}
         </List>
