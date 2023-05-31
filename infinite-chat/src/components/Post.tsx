@@ -6,12 +6,9 @@ import {
   CardActions,
   Avatar,
   IconButton,
+  Typography,
 } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-// import ShareIcon from "@mui/icons-material/Share";
+import { Favorite, MoreVert, Comment } from "@mui/icons-material";
 
 interface PostProps {
   id: string;
@@ -23,14 +20,10 @@ const Post = ({ id, title, contents }: PostProps) => {
   return (
     <Card sx={{ width: "100%" }}>
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
+        avatar={<Avatar aria-label="recipe">R</Avatar>}
         action={
           <IconButton aria-label="settings">
-            <MoreVertIcon />
+            <MoreVert />
           </IconButton>
         }
         title={title}
@@ -47,9 +40,12 @@ const Post = ({ id, title, contents }: PostProps) => {
           {contents}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+      <CardActions disableSpacing sx={{ justifyContent: "end" }}>
+        <IconButton aria-label="like">
+          <Favorite />
+        </IconButton>
+        <IconButton aria-label="comment" sx={{ ml: "3px", mr: "1px" }}>
+          <Comment />
         </IconButton>
       </CardActions>
     </Card>

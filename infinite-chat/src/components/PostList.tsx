@@ -1,4 +1,4 @@
-import { CircularProgress, List, ListItem } from "@mui/material";
+import { Box, CircularProgress, List, ListItem } from "@mui/material";
 import { useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "components/Post";
@@ -35,7 +35,7 @@ const PostList = () => {
   };
 
   return (
-    <>
+    <Box maxWidth={"sm"}>
       <h1>무한스크롤 게시판 데모</h1>
       <hr />
       <InfiniteScroll
@@ -52,7 +52,7 @@ const PostList = () => {
           ))}
         </List>
       </InfiniteScroll>
-    </>
+    </Box>
   );
 };
 
